@@ -5,7 +5,7 @@ import * as styles from "./Header.module.scss"
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <nav className={styles.header__nav}>
         <Link to="/">
           <StaticImage src="../../images/shared/logo.svg" alt="Logo" />
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div className={styles.header__heroImage}>
           <StaticImage
-            src="../../images/mobile/image-keyboard.jpg"
+            src="../../images/desktop/image-keyboard.jpg"
             alt="Typemaster keyboard"
           />
         </div>

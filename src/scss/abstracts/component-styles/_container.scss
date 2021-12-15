@@ -1,0 +1,26 @@
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../space" as *;
+@use "../mixins" as *;
+
+@mixin container-styles($pl: true, $pr: true) {
+  @if $pl {
+    padding-left: $space-5;
+  }
+  @if $pr {
+    padding-right: $space-5;
+  }
+
+  @include mq(tablet-portrait) {
+    @if $pl {
+      padding-left: $space-8;
+    } @else {
+      padding-left: 0;
+    }
+    @if $pr {
+      padding-right: $space-8;
+    } @else {
+      padding-right: 0;
+    }
+  }
+}

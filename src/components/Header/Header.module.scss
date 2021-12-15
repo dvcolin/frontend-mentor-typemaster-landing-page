@@ -20,10 +20,23 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
     row-gap: $space-16;
-    margin-top: $space-16;
+    column-gap: $space-8;
+    margin-top: $space-18;
+
+    @include mq(tablet-portrait) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 42.5rem;
+    }
 
     &-content {
       @include container-styles;
+      display: flex;
+      flex-direction: column;
+
+      @include mq(tablet-portrait) {
+        @include container-styles(true, false);
+        justify-content: center;
+      }
 
       &-heading {
         @include heading-styles(h1);
@@ -37,6 +50,10 @@
         display: flex;
         align-items: center;
         margin-top: $space-8;
+
+        @include mq(tablet-portrait) {
+          margin-top: $space-10;
+        }
 
         &-button {
           &:link,
@@ -54,11 +71,19 @@
     }
 
     &-image {
-      padding-left: $space-5;
+      @include container-styles(true, false);
+      height: 33rem;
       overflow: hidden;
+
+      @include mq(tablet-portrait) {
+        @include container-styles(false, false);
+        height: 42.5rem;
+      }
 
       & > div {
         border-radius: 1.6rem 0 0 1.6rem;
+        width: 100%;
+        height: 100%;
       }
     }
   }

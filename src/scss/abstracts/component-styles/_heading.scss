@@ -1,0 +1,25 @@
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../space" as *;
+@use "../mixins" as *;
+
+@mixin heading-styles($variant: h2) {
+  font-family: inherit;
+  font-weight: $font-weight-black;
+  text-transform: uppercase;
+  color: $color-secondary;
+  text-transform: uppercase;
+
+  @if $variant == h1 {
+    font-size: $font-size-h1-mobile;
+    line-height: $line-height-h1;
+  }
+
+  @if $variant == h2 {
+    font-size: $font-size-h2;
+  }
+
+  @if $variant == h3 {
+    font-size: $font-size-h3;
+  }
+}
