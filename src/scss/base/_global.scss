@@ -11,9 +11,11 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-family: $font-family-body;
   font-size: $font-size-body;
   line-height: $line-height-body;
+  padding: $space-5 0;
   background-color: $color-white;
   color: $color-gray;
 }

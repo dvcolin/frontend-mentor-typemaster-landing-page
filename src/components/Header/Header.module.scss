@@ -1,0 +1,65 @@
+@use "../../scss/abstracts" as *;
+
+.header {
+  &__nav {
+    @include container-styles;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-button {
+      &:link,
+      &:visited {
+        @include button-styles(secondary);
+      }
+    }
+  }
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: $space-16;
+    margin-top: $space-16;
+
+    &-content {
+      @include container-styles;
+
+      &-heading {
+        @include heading-styles(h1);
+      }
+
+      &-paragraph {
+        margin-top: $space-8;
+      }
+
+      &-cta {
+        display: flex;
+        align-items: center;
+        margin-top: $space-8;
+
+        &-button {
+          &:link,
+          &:visited {
+            @include button-styles(primary);
+          }
+        }
+
+        &-text {
+          text-transform: uppercase;
+          font-weight: $font-weight-bold;
+          margin-left: $space-8;
+        }
+      }
+    }
+
+    &-image {
+      padding-left: $space-5;
+      overflow: hidden;
+
+      & > div {
+        border-radius: 1.6rem 0 0 1.6rem;
+      }
+    }
+  }
+}

@@ -1,8 +1,12 @@
 import React from "react"
-import "../scss/main.scss"
+import Header from "../components/Header/Header"
 
 const IndexPage = () => {
-  return <div>Home Page</div>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default IndexPage
